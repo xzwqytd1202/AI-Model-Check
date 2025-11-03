@@ -37,6 +37,10 @@ logging.basicConfig(
 )
 
 app = Flask(__name__, static_folder='src/static', static_url_path='/')
+# 前端静态资源路由：访问 / 时返回 index.html
+@app.route('/')
+def serve_frontend():
+    return send_from_directory(app.static_folder, 'index.html')
 
 # 更完整的CORS配置
 CORS(app, resources={r"/api/*": {"origins": "*"}})

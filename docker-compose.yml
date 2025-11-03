@@ -21,7 +21,8 @@ services:
 
   app:
     image: monday1/threat-intel-hub:latest
-    # image: threat-intel-hub:latest
+    # 如果你后面要自定义镜像，可以改成：
+    # build: .
     container_name: threat-intel-hub-app
     env_file:
       - .env
@@ -34,9 +35,15 @@ services:
     ports:
       - "8891:8891"
     depends_on:
-      threat-intel-hub-db  :
+      threat-intel-hub-db:
         condition: service_healthy
     restart: always
-
+    # 🔽 新增：挂载本地源代码到容器内
+    volumes:
+      - ./src:/app/src
+      - ./app.py:/app/app.py
+      - ./requirements.txt:/app/requirements.txt  # 如果有依赖文件，可选
+      - ./logs:/app/logs                         # 可选，保存日志
+# 🔽 一定要加在最底部（顶格，不要缩进）
 volumes:
   mysql_data:
