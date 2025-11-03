@@ -221,17 +221,6 @@ docker compose up -d
 We’re proud that our project is trusted by awesome teams around the world 🌍
 
 
-| Logo / Name | Description |
-|--------------|--------------|
-| [Threat-Intel-Hub](https://github.com/HaoY-l/threat-intel-hub) | 作者✍️ | 
-| [中铁信（北京）网络技术研究院有限公司智能技术部](-) | ㊙️ | 
 
-
-> 💬 If your company is using this project, feel free to open a PR and add your logo here!
-
-
-## 有任何问题请联系作者✍️进群也请加作者微信
-**项目不得用于任何非法用途，一切行为自行承担后果，与作者无关；若该工具的任何行为有违规请联系作者✍️**。 
-![作者✍️微信🛰️](./data/public/author.png) 
 
 
